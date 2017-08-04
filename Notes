@@ -1,3 +1,11 @@
+git fetch -p 
+    - This updates your local copies of remote branches, including master, but not your local branch which is tracking master
+git rebase -i origin/master 
+    - This rebases your branch to the current master according to github, and allows you to squash commits by changing pick to squash or s. Note that what git considers current is based entirely on what is local to your machine when you run rebase, so always fetch first.
+git push --force-with-lease 
+    - This updates the copy of your branch on the github server, and will fail if someone else has updated it in the meantime.
+
+
 Course:
 Building a Web App with ASP.NET Core, MVC 6, EF Core, and Angular
 
